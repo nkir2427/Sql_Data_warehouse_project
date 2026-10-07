@@ -19,6 +19,17 @@
         4. Create the Bronze, Silver, and Gold schemas.
 
 ===============================================================================
+    ⚠ WARNING
+===============================================================================
+
+    This script creates a new database named 'DataWarehouse' and its schemas.
+
+    IMPORTANT:
+    - Make sure the database does not already exist before running this script.
+    - Running this script with an existing database name may cause an error.
+    - Verify the target SQL Server instance before execution.
+===============================================================================
+
 */
 
  
