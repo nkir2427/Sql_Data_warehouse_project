@@ -1,0 +1,154 @@
+
+/*
+===============================================================================
+                    ⚠ WARNING - BRONZE LAYER DDL
+===============================================================================
+
+PURPOSE:
+    This script creates the CRM and ERP tables in the Bronze layer of the
+    DataWarehouse database.
+
+IMPORTANT:
+    ⚠ Existing tables with the same names will be DROPPED before being
+      recreated.
+
+    ⚠ Any existing data in these tables will be permanently deleted.
+
+    ⚠ Make sure you are connected to the correct database/server before
+      executing this script.
+
+TABLE GROUPS:
+
+    CRM TABLES
+    -----------
+
+    bronze.crm_cust_info
+        -> Customer information
+
+    bronze.crm_prd_info
+        -> Product information
+
+    bronze.crm_sales_details
+        -> Sales transaction information
+
+
+    ERP TABLES
+    -----------
+
+    bronze.erp_CUST_AZ12
+        -> Additional customer information
+
+    bronze.erp_LOC_A101
+        -> Customer location/country information
+
+    bronze.erp_PX_CAT_G1V2
+        -> Product category information
+
+
+SCRIPT PROCESS:
+    1. Switch to the DataWarehouse database.
+    2. Check whether each table already exists.
+    3. Drop the existing table if found.
+    4. Recreate the table with the required columns and data types.
+
+LAYER:
+    Bronze Layer = Raw / source-system data
+
+===============================================================================
+*/
+
+
+USE DataWarehouse;
+
+
+
+-- DDL FOR CRM TABLES--
+
+if object_id ('bronze.crm_cust_info', 'U' ) is not null 
+	drop table bronze.crm_cust_info ;
+
+Go
+
+create table bronze.crm_cust_info (
+cst_id	INT,
+cst_key	NVARCHAR(50),
+cst_firstname	NVARCHAR(50),
+cst_lastname	NVARCHAR(50),
+cst_marital_status	NVARCHAR(50),
+cst_gndr	NVARCHAR(50),
+cst_create_date DATE
+);
+
+
+if object_id ('bronze.crm_prd_info', 'U' ) is not null 
+	drop table bronze.crm_prd_info ;
+
+Go
+
+CREATE TABLE bronze.crm_prd_info (
+prd_id	INT,
+prd_key	NVARCHAR(50),
+prd_nm	NVARCHAR(50),
+prd_cost	INT,
+prd_line	NVARCHAR(1),
+prd_start_dt	DATE,
+prd_end_dt DATE
+);
+
+if object_id ('bronze.crm_sales_details', 'U' ) is not null 
+	drop table bronze.crm_sales_details ;
+
+Go
+
+create table bronze.crm_sales_details (
+sls_ord_num	NVARCHAR(50),
+sls_prd_key	NVARCHAR(50),
+sls_cust_id	INT,
+sls_order_dt	INT,
+sls_ship_dt	INT,
+sls_due_dt	INT,
+sls_sales	INT,
+sls_quantity	INT,
+sls_price INT
+);
+
+Go
+-- DDL FOR ERP TABLES--
+
+
+
+if object_id ('bronze.erp_CUST_AZ12', 'U' ) is not null 
+	drop table bronze.erp_CUST_AZ12 ;
+
+Go
+
+CREATE TABLE bronze.erp_CUST_AZ12 (
+CID	NVARCHAR(50),
+BDATE	DATE,
+GEN NVARCHAR(50)
+);
+Go
+
+if object_id ('bronze.erp_LOC_A101', 'U' ) is not null 
+	drop table bronze.erp_LOC_A101 ;
+
+Go
+
+CREATE TABLE bronze.erp_LOC_A101 (
+CID	NVARCHAR(50),
+CNTRY NVARCHAR(50)
+);
+
+Go
+
+if object_id ('bronze.erp_PX_CAT_G1V2', 'U' ) is not null 
+	drop table bronze.erp_PX_CAT_G1V2 ;
+
+Go
+
+CREATE TABLE bronze.erp_PX_CAT_G1V2 (
+ID	NVARCHAR(50),
+CAT	NVARCHAR(50),
+SUBCAT	NVARCHAR(50),
+MAINTENANCE NVARCHAR(50)
+);
