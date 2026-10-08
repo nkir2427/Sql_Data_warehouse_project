@@ -131,3 +131,25 @@ case when upper(trim(gen)) in ('F','Female') then 'Female'
 end gen
 from bronze.erp_CUST_AZ12;
 
+
+/*
+========================================================
+ERP LOCATION - BRONZE TO SILVER TRANSFORMATION
+========================================================
+- Remove hyphens from customer IDs.
+- Standardize country codes to country names.
+- Handle NULL/empty country values as 'n/a'.
+- Trim unwanted spaces from country values.
+========================================================
+*/
+
+
+insert into silver.erp_LOC_A101 (cid,cntry)
+select 
+Replace(cid, '-','') as cid,
+CASE WHEN TRIM(cntry)='DE' THEN 'Germany'
+	 WHEN TRIM(cntry) IN ('US','USA') THEN 'United States'
+	 WHEN TRIM(cntry)='' OR TRIM(cntry) IS NULL THEN 'n/a'
+	 else TRIM(cntry)
+end as cntry
+from bronze.erp_LOC_A101;
