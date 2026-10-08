@@ -153,3 +153,21 @@ CASE WHEN TRIM(cntry)='DE' THEN 'Germany'
 	 else TRIM(cntry)
 end as cntry
 from bronze.erp_LOC_A101;
+
+/*
+========================================================
+ERP PRODUCT CATEGORY - BRONZE TO SILVER
+========================================================
+- Load product category data from Bronze to Silver.
+- Transfer ID, category, subcategory and maintenance values.
+========================================================
+*/
+
+
+insert into silver.erp_PX_CAT_G1V2(id,cat,subcat,maintenance)
+select 
+id,
+cat,
+subcat,
+maintenance
+from bronze.erp_PX_CAT_G1V2;
