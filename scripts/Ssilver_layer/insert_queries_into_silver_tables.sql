@@ -64,3 +64,44 @@ cast(prd_start_dt as date) as prd_start_dt,
 CAST(DATEADD(DAY,-1,LEAD(prd_start_dt) OVER (PARTITION BY prd_key ORDER BY prd_start_dt)) as date) AS prd_end_dt
 from bronze.crm_prd_info;
 
+
+*
+========================================================
+CRM SALES - BRONZE TO SILVER TRANSFORMATION
+========================================================
+- Convert invalid sales dates to NULL.
+- Derive Sales using Quantity × ABS(Price) when invalid.
+- Derive Price from Sales ÷ Quantity when invalid.
+- Convert negative Price values to positive.
+- Handle NULL and zero values safely.
+========================================================
+*/
+
+ --rules for final query for sales,price and quantity
+--if sales is negative,zero or null derive it using price and quantity
+-- if price is zero or null ,derived using quantity and sales
+-- if price is negative convert into positive
+
+ insert into silver.crm_sales_details (sls_ord_num,sls_prd_key,sls_cust_id,sls_order_dt,sls_ship_dt,sls_due_dt,sls_sales,sls_quantity,sls_price)
+ SELECT sls_ord_num
+      ,sls_prd_key
+      ,sls_cust_id
+      ,case when sls_order_dt=0 or LEN(sls_order_dt) != 8 THEN NULL
+            ELSE CAST(CAST(sls_order_dt AS VARCHAR) AS DATE)
+        END AS sls_order_dt
+       ,case when sls_ship_dt=0 or LEN(sls_ship_dt) != 8 THEN NULL
+            ELSE CAST(CAST(sls_ship_dt AS VARCHAR) AS DATE)
+        END AS sls_ship_dt
+       ,case when sls_due_dt=0 or LEN(sls_due_dt) != 8 THEN NULL
+            ELSE CAST(CAST(sls_due_dt AS VARCHAR) AS DATE)
+        END AS sls_due_dt
+      ,case when sls_sales <=0 or sls_sales is null or sls_sales != sls_quantity * ABS(sls_price)
+                then ABS(sls_price) * sls_quantity
+            else sls_sales
+       end AS sls_sales
+      ,sls_quantity 
+       ,CASE WHEN sls_price <=0 or sls_price is null then sls_sales/NULLIF(sls_quantity,0)
+             ELSE sls_price
+        END AS sls_price
+  FROM [DataWarehouse].[bronze].[crm_sales_details]
+
