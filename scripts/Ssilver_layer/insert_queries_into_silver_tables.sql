@@ -103,5 +103,31 @@ CRM SALES - BRONZE TO SILVER TRANSFORMATION
        ,CASE WHEN sls_price <=0 or sls_price is null then sls_sales/NULLIF(sls_quantity,0)
              ELSE sls_price
         END AS sls_price
-  FROM [DataWarehouse].[bronze].[crm_sales_details]
+  FROM [DataWarehouse].[bronze].[crm_sales_details];
+
+
+/*
+========================================================
+ERP CUSTOMER - BRONZE TO SILVER TRANSFORMATION
+========================================================
+- Clean customer IDs by removing the 'NAS' prefix.
+- Replace future birth dates with NULL.
+- Standardize gender values to Male/Female.
+- Set unknown gender values to 'n/a'.
+========================================================
+*/
+
+insert into silver.erp_CUST_AZ12(cid,bdate,gen)
+select 
+case when cid like 'NAS%' THEN SUBSTRING(cid,4,len(cid))
+	 else cid
+end as cid,
+case when bdate > GETDATE() THEN NULL
+	 ELSE bdate
+end as bdate,
+case when upper(trim(gen)) in ('F','Female') then 'Female'
+	 when upper(trim(gen)) in ('M','Male') then 'Male'
+	 Else 'n/a'
+end gen
+from bronze.erp_CUST_AZ12;
 
