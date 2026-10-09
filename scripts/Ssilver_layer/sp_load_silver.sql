@@ -1,3 +1,19 @@
+/*
+========================================================
+SILVER LAYER - LOAD STORED PROCEDURE
+========================================================
+- Truncate existing Silver tables before loading.
+- Clean and transform CRM customer, product and sales data.
+- Clean and standardize ERP customer and location data.
+- Load ERP product category data from Bronze to Silver.
+- Track individual and total load duration.
+- Handle errors using TRY...CATCH.
+
+Execution:
+EXEC silver.load_silver;
+========================================================
+*/
+
 create or alter procedure silver.load_silver as 
 begin
 	DECLARE @start_time DATETIME, @end_time DATETIME, @batch_start_time DATETIME, @batch_end_time DATETIME; 
