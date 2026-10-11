@@ -13,7 +13,8 @@ The project follows the Medallion Architecture, consisting of three layers:
 
 ![Data Architecture](docs/High%20level%20data%20architecture%20of%20the%20project.jpg)
 
-1.**Bronze Layer**: Raw Data Ingestion
+
+**Bronze Layer** : Raw Data Ingestion
 
 -Imports source data from ERP and CRM CSV files into SQL Server.
 
@@ -21,7 +22,8 @@ The project follows the Medallion Architecture, consisting of three layers:
 
 -Provides the foundation for downstream data transformations.
 
-2.**Silver Layer** : Data Cleaning and Transformation
+
+**Silver Layer** : Data Cleaning and Transformation
 
 -Identifies and handles data quality issues.
 
@@ -29,7 +31,8 @@ The project follows the Medallion Architecture, consisting of three layers:
 
 -Integrates and prepares data for analytical use.
 
-3.**Gold Layer** : Analytics-Ready Data
+
+**Gold Layer** : Analytics-Ready Data
 
 -Organizes transformed data into fact and dimension tables.
 
@@ -42,7 +45,7 @@ The project follows the Medallion Architecture, consisting of three layers:
 
 The primary goal of this project is to build a modern data warehouse that consolidates sales-related information from multiple source systems into a unified analytical environment.
 
-#The project focuses on four key areas:
+** The project focuses on four key areas:**
 
 1.Data Architecture: Implementing a layered data warehouse using the Medallion Architecture.
 
@@ -52,23 +55,24 @@ The primary goal of this project is to build a modern data warehouse that consol
 
 4.Data Analytics: Developing SQL queries to investigate business performance, customer behavior, product performance, and sales trends.
 
+
 **Skills Demonstrated**
 
--SQL Server and T-SQL development
-
--Data engineering and ETL workflows
-
--Data cleansing and standardization
-
--Data warehouse architecture
-
--Dimensional modeling and star schemas
-
--Data quality validation
-
--SQL-based business analytics
-
--Git and GitHub project management
+          -SQL Server and T-SQL development
+          
+          -Data engineering and ETL workflows
+          
+          -Data cleansing and standardization
+          
+          -Data warehouse architecture
+          
+          -Dimensional modeling and star schemas
+          
+          -Data quality validation
+          
+          -SQL-based business analytics
+          
+          -Git and GitHub project management
 
 ---
 # Technologies and Resources
@@ -90,44 +94,43 @@ The project uses the following tools and resources, with the core software tools
 ---
 
 ## 📂 Repository Structure
-
-
-Sql_Data_warehouse_project/
-│
-├── datasets/
-│   ├── source_crm/                 # CRM source CSV files
-│   └── source_erp/                 # ERP source CSV files
-│
-├── docs/                           # Project documentation
-│   ├── data_architecture.jpg       # Data warehouse architecture
-│   ├── data_flow.jpg               # Data flow diagrams
-│   ├── Integration_model.jpg       
-│   ├── star_schema.jpg             
-│   ├── first_project.drawio       #all diagrams draw using draw.io
-│  
-│
-├── scripts/                        # SQL scripts
-│   ├── bronze/
-│   │   ├── ddl_bronze.sql          # Create Bronze tables
-│   │   └── proc_load_bronze.sql    # Load raw source data![Uploading image.png…]()
-|
-│   │
-│   ├── silver/
-│   │   ├── ddl_silver.sql          # Create Silver tables
-│   │   └── proc_load_silver.sql    # Clean and transform data
-│   │
-│   └── gold/
-│       └── ddl_gold.sql            # Create analytical data models
-│
-├── test/                           # Data quality and validation scripts
-│
-|──data_catalog/                    # store catalog data of gold layer views
-|
-|──project_plan                     # store notion files which used for project plan
-|
-├── README.md                       # Project overview and instructions
-├── LICENSE                         # MIT Project license
-
+              ```
+              Sql_Data_warehouse_project/
+              │
+              ├── datasets/
+              │   ├── source_crm/                 # CRM source CSV files
+              │   └── source_erp/                 # ERP source CSV files
+              │
+              ├── docs/                           # Project documentation
+              │   ├── data_architecture.jpg       # Data warehouse architecture
+              │   ├── data_flow.jpg               # Data flow diagrams
+              │   ├── Integration_model.jpg       
+              │   ├── star_schema.jpg             
+              │   ├── first_project.drawio       #all diagrams draw using draw.io
+              │  
+              │
+              ├── scripts/                        # SQL scripts
+              │   ├── bronze/
+              │   │   ├── ddl_bronze.sql          # Create Bronze tables
+              │   │   └── proc_load_bronze.sql    # Load raw source data![Uploading image.png…]()
+              |
+              │   │
+              │   ├── silver/
+              │   │   ├── ddl_silver.sql          # Create Silver tables
+              │   │   └── proc_load_silver.sql    # Clean and transform data
+              │   │
+              │   └── gold/
+              │       └── ddl_gold.sql            # Create analytical data models
+              │
+              ├── test/                           # Data quality and validation scripts
+              │
+              |──data_catalog/                    # store catalog data of gold layer views
+              |
+              |──project_plan                     # store notion files which used for project plan
+              |
+              ├── README.md                       # Project overview and instructions
+              ├── LICENSE                         # MIT Project license
+              ```
 ---
 
 ## License
