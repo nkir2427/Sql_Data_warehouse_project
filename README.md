@@ -1,6 +1,6 @@
 # Data Warehouse and Analytics Project
 
-Welcome to my Data Warehouse and Analytics Project! 🚀
+👋 Welcome to my Data Warehouse and Analytics Project! 🚀
 
 This repository showcases the development of a SQL Server data warehouse, covering the complete data engineering workflow, from raw data ingestion and transformation to analytical data modeling .
 
