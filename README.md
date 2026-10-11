@@ -1,10 +1,10 @@
 # Data Warehouse and Analytics Project
 
-#Welcome to my Data Warehouse and Analytics Project! 🚀
+Welcome to my Data Warehouse and Analytics Project! 🚀
 
-#This repository showcases the development of a SQL Server data warehouse, covering the complete data engineering workflow, from raw data ingestion and transformation to analytical data modeling .
+This repository showcases the development of a SQL Server data warehouse, covering the complete data engineering workflow, from raw data ingestion and transformation to analytical data modeling .
 
-#The project demonstrates practical skills in SQL development, ETL pipeline design, data quality management, dimensional modeling, and data analytics. It is designed to serve as a portfolio project highlighting the implementation of a structured and scalable analytical data solution.
+The project demonstrates practical skills in SQL development, ETL pipeline design, data quality management, dimensional modeling, and data analytics. It is designed to serve as a portfolio project highlighting the implementation of a structured and scalable analytical data solution.
 
 ---
 # Data Architecture
@@ -14,16 +14,19 @@
 ![Data Architecture](docs/High%20level%20data%20architecture%20of%20the%20project.jpg)
 
 1.**Bronze Layer**: Raw Data Ingestion
+
 -Imports source data from ERP and CRM CSV files into SQL Server.
 -Preserves the original source data for traceability and further processing.
 -Provides the foundation for downstream data transformations.
 
 2.**Silver Layer** : Data Cleaning and Transformation
+
 -Identifies and handles data quality issues.
 -Standardizes data formats and values.
 -Integrates and prepares data for analytical use.
 
 3.**Gold Layer** : Analytics-Ready Data
+
 -Organizes transformed data into fact and dimension tables.
 -Implements a star schema to support efficient analytical queries.
 -Provides a consistent data foundation for reporting and business intelligence.
@@ -112,15 +115,15 @@ Sql_Data_warehouse_project/
 
 ---
 
-📜 License
+# License
 
 This project is licensed under the MIT License. See the LICENSE file for details.
 
-👩‍💻 About Me
+#👩‍💻 About Me
 
 Hi, I'm **Nadeeka Kiringoda**, a PhD researcher and Data Engineering professional with **7+ years of experience** in building reliable data pipelines, designing scalable data architectures, and developing data-driven solutions. I'm passionate about leveraging data engineering, analytics, and AI to solve real-world problems.
 Thank you for visiting my repository! ⭐
 
-Let's stay in touch! Feel free to connect with me on the following platforms:
+# Let's stay in touch! Feel free to connect with me on the following platforms:
 [![LinkedIn](https://www.linkedin.com/in/nadeeka-kiringoda-92634099/)
 
