@@ -143,7 +143,6 @@ Hi, I'm **Nadeeka Kiringoda**, a PhD researcher and Data Engineering professiona
 Thank you for visiting my repository! ⭐
 
 ### Let's stay in touch!:
-[![LinkedIn]((https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/nadeeka-kiringoda-92634099/)
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://linkedin.com/in/baraa-khatib-salkini)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://linkedin.com/in/nadeeka-kiringoda-92634099)
 
 
