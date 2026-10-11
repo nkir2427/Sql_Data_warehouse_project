@@ -142,6 +142,8 @@ This project is licensed under the MIT License. See the LICENSE file for details
 Hi, I'm **Nadeeka Kiringoda**, a PhD researcher and Data Engineering professional with **7+ years of experience** in building reliable data pipelines, designing scalable data architectures, and developing data-driven solutions. I'm passionate about leveraging data engineering, analytics, and AI to solve real-world problems.
 Thank you for visiting my repository! ⭐
 
-### Let's stay in touch! Feel free to connect with me on the following platforms:
+### Let's stay in touch!:
 [![LinkedIn]((https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/nadeeka-kiringoda-92634099/)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://linkedin.com/in/baraa-khatib-salkini)
+
 
