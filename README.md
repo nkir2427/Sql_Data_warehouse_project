@@ -9,57 +9,74 @@ The project demonstrates practical skills in SQL development, ETL pipeline desig
 ---
 # Data Architecture
 
-#The project follows the Medallion Architecture, consisting of three layers:
+The project follows the Medallion Architecture, consisting of three layers:
 
 ![Data Architecture](docs/High%20level%20data%20architecture%20of%20the%20project.jpg)
 
 1.**Bronze Layer**: Raw Data Ingestion
 
 -Imports source data from ERP and CRM CSV files into SQL Server.
+
 -Preserves the original source data for traceability and further processing.
+
 -Provides the foundation for downstream data transformations.
 
 2.**Silver Layer** : Data Cleaning and Transformation
 
 -Identifies and handles data quality issues.
+
 -Standardizes data formats and values.
+
 -Integrates and prepares data for analytical use.
 
 3.**Gold Layer** : Analytics-Ready Data
 
 -Organizes transformed data into fact and dimension tables.
+
 -Implements a star schema to support efficient analytical queries.
+
 -Provides a consistent data foundation for reporting and business intelligence.
 
 ---
 #Project Objectives
 
-#The primary goal of this project is to build a modern data warehouse that consolidates sales-related information from multiple source systems into a unified analytical environment.
+The primary goal of this project is to build a modern data warehouse that consolidates sales-related information from multiple source systems into a unified analytical environment.
 
 #The project focuses on four key areas:
 
 1.Data Architecture: Implementing a layered data warehouse using the Medallion Architecture.
+
 2.ETL Development: Building SQL-based processes to extract, load, cleanse, and transform source data.
+
 3.Dimensional Modeling: Designing fact and dimension tables to support analytical workloads.
+
 4.Data Analytics: Developing SQL queries to investigate business performance, customer behavior, product performance, and sales trends.
 
-#Skills Demonstrated
+**Skills Demonstrated**
+
 -SQL Server and T-SQL development
+
 -Data engineering and ETL workflows
+
 -Data cleansing and standardization
+
 -Data warehouse architecture
+
 -Dimensional modeling and star schemas
+
 -Data quality validation
+
 -SQL-based business analytics
+
 -Git and GitHub project management
 
 ---
-#🛠️ Technologies and Resources
+# Technologies and Resources
 
 The project uses the following tools and resources, with the core software tools available free of charge.
 
 
-|-------------------------------------------------------------------------------------------------------------------|
+
 | Tool or Resource                       | Purpose                                                                  |
 |----------------------------------------|--------------------------------------------------------------------------|
 |SQL Server Express                      |	Database engine for storing and processing warehouse data               |
@@ -67,13 +84,11 @@ The project uses the following tools and resources, with the core software tools
 |GitHub                                  |	Source control, version management, and project documentation           |
 |Draw.io                                 |	Creating architecture diagrams, data flows, and data models             |
 |Notion                                  |	Organizing project phases, tasks, and implementation notes              |
-|-------------------------------------------------------------------------------------------------------------------|
 |Dataset                                 |ERP and CRM source files in CSV format, stored in the datasets directory  |
 |Project Documentation                   |Reference for the project's implementation steps                          |
-|-------------------------------------------------------------------------------------------------------------------|
 
 ---
-📂 Repository Structure
+
 ## 📂 Repository Structure
 
 
@@ -115,15 +130,15 @@ Sql_Data_warehouse_project/
 
 ---
 
-# License
+## License
 
 This project is licensed under the MIT License. See the LICENSE file for details.
 
-#👩‍💻 About Me
+##👩‍💻 About Me
 
 Hi, I'm **Nadeeka Kiringoda**, a PhD researcher and Data Engineering professional with **7+ years of experience** in building reliable data pipelines, designing scalable data architectures, and developing data-driven solutions. I'm passionate about leveraging data engineering, analytics, and AI to solve real-world problems.
 Thank you for visiting my repository! ⭐
 
-# Let's stay in touch! Feel free to connect with me on the following platforms:
+### Let's stay in touch! Feel free to connect with me on the following platforms:
 [![LinkedIn](https://www.linkedin.com/in/nadeeka-kiringoda-92634099/)
 
