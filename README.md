@@ -16,29 +16,29 @@ The project follows the Medallion Architecture, consisting of three layers:
 
 **Bronze Layer** : Raw Data Ingestion
 
--Imports source data from ERP and CRM CSV files into SQL Server.
-
--Preserves the original source data for traceability and further processing.
-
--Provides the foundation for downstream data transformations.
+          -Imports source data from ERP and CRM CSV files into SQL Server.
+          
+          -Preserves the original source data for traceability and further processing.
+          
+          -Provides the foundation for downstream data transformations.
 
 
 **Silver Layer** : Data Cleaning and Transformation
 
--Identifies and handles data quality issues.
-
--Standardizes data formats and values.
-
--Integrates and prepares data for analytical use.
+          -Identifies and handles data quality issues.
+          
+          -Standardizes data formats and values.
+          
+          -Integrates and prepares data for analytical use.
 
 
 **Gold Layer** : Analytics-Ready Data
 
--Organizes transformed data into fact and dimension tables.
-
--Implements a star schema to support efficient analytical queries.
-
--Provides a consistent data foundation for reporting and business intelligence.
+          -Organizes transformed data into fact and dimension tables.
+          
+          -Implements a star schema to support efficient analytical queries.
+          
+          -Provides a consistent data foundation for reporting and business intelligence.
 
 ---
 #Project Objectives
@@ -47,13 +47,13 @@ The primary goal of this project is to build a modern data warehouse that consol
 
 ** The project focuses on four key areas:**
 
-1.Data Architecture: Implementing a layered data warehouse using the Medallion Architecture.
-
-2.ETL Development: Building SQL-based processes to extract, load, cleanse, and transform source data.
-
-3.Dimensional Modeling: Designing fact and dimension tables to support analytical workloads.
-
-4.Data Analytics: Developing SQL queries to investigate business performance, customer behavior, product performance, and sales trends.
+          1.Data Architecture: Implementing a layered data warehouse using the Medallion Architecture.
+          
+          2.ETL Development: Building SQL-based processes to extract, load, cleanse, and transform source data.
+          
+          3.Dimensional Modeling: Designing fact and dimension tables to support analytical workloads.
+          
+          4.Data Analytics: Developing SQL queries to investigate business performance, customer behavior, product performance, and sales trends.
 
 
 **Skills Demonstrated**
@@ -137,7 +137,7 @@ The project uses the following tools and resources, with the core software tools
 
 This project is licensed under the MIT License. See the LICENSE file for details.
 
-##👩‍💻 About Me
+👩‍💻 About Me
 
 Hi, I'm **Nadeeka Kiringoda**, a PhD researcher and Data Engineering professional with **7+ years of experience** in building reliable data pipelines, designing scalable data architectures, and developing data-driven solutions. I'm passionate about leveraging data engineering, analytics, and AI to solve real-world problems.
 Thank you for visiting my repository! ⭐
